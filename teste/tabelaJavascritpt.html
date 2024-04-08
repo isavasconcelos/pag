@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>batalha_naval</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            border: 1px solid black;
+            padding: 5px;
+          
+        }
+        img {
+            width: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div id="table-container"></div>
+
+    <script>
+        var numRows = 10;
+        var numCols = 10;
+
+        var tableContainer = document.getElementById('table-container');
+        var table = document.createElement('table');
+
+        for (var i = 0; i < numRows; i++) {
+            var row = document.createElement('tr');
+            for (var j = 0; j < numCols; j++) {
+                var cell = document.createElement('td');
+                var imagem = document.createElement('img');
+                imagem.src = 'img/Fire-icon.png';
+                cell.appendChild(imagem);
+                row.appendChild(cell);
+            }
+            
+            table.appendChild(row);
+        }
+        tableContainer.appendChild(table);
+    </script>
+</body>
+</html>
