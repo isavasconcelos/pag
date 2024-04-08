@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>aula3</title>
+</head>
+<body>
+   <input type="button" value="Tahoma" onclick="afonte('Tahoma');">
+   <input type="button" value="Times new Roman" onclick="afonte('Times new roman');">
+   <input type="button" value="Arial" onclick="afonte('Arial');">
+   <input type="button" value="Arial Black" onclick="afonte('Arial black');">
+   <input type="button" value="Comic Sans" onclick="afonte('Comic Sans MS');">
+ 
+    <h1 id="fonte">Testando cor de fonte e página </h1>
+ 
+    <script>
+        function afonte(fonte){
+        document.getElementById('fonte').style.fontFamily=fonte;
+        }
+ 
+    </script>        
+</body>
+</html>
