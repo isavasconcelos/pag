@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 1</title>
+
+    <style>
+      #imagem{
+        max-width: 50%;
+        max-height: 50%;
+      }
+    </style>
+
+  </head>
+  <body onload="trocar()">
+    <script>
+      let lista_fotos = [
+        "img/historia.jpg",
+        "img/geografia.jpg",
+        "img/ingless.jpg",
+        "img/banco_de_dados.jpg",
+        "img/matematica.jpg",
+        "img/portugues.png"
+      ];
+
+      function trocar() {
+        let indice = Math.floor(Math.random() * lista_fotos.length);
+        document.getElementById("imagem").src = lista_fotos[indice];
+      }
+    </script>
+    <h1>Use o F5</h1>
+    <img id="imagem" src="" style="scale: 0.5" />
+  </body>
+</html>

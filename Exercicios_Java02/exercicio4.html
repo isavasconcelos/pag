@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #5C4033;
+        }
+ 
+        .imagem {
+            filter: grayscale(60%);
+        }
+ 
+        .imagem:hover {
+            filter: grayscale(0%);
+        }
+
+    </style>
+</head>
+<body>
+<script>
+
+    americano = new Image()
+    americano.src = "americano.jpg"
+    capuccino = new Image()
+    capuccino.src = "capuccino.jpg"
+    gelado = new Image()
+    gelado.src = "gelado.jpg"
+    mochacino = new Image()
+    mochacino.src = "mochacino.jpg"
+    mochalatte = new Image()
+    mochalatte.src = "mochalatte.jpg"
+
+    function exibir(nome){
+        imagem = window.document['centro'];
+        imagem.src = nome;
+        imagem.style.filter = "grayscale(0%)";
+    }
+</script>
+<center>
+    <h1> Passe com o mouse em cima da imagem</h1>
+    <img src="americano.jpg" name="centro" width=300 height="300"></img>
+    <br> <br>
+    <a href="#" onclick="exibir('americano.jpg')">
+        <img src="americano.jpg" border="0" name="imagem" class="imagem" width="100px" height="100px">
+    </a>
+    <a href="#" onclick="exibir('capuccino.jpg')">
+        <img src="capuccino.jpg" border="0" name="imagem" class="imagem" width="100px" height="100px">
+    </a>
+    <a href="#" onclick="window.document['centro'].src = gelado.src">
+        <img src="gelado.jpg" border="0" name="imagem" class="imagem" width="100px" height="100px">
+    </a>
+    <a href="#" onclick="window.document['centro'].src = mochacino.src">
+        <img src="mochacino.jpg" border="0" name="imagem" class="imagem" width="100px" height="100px">
+    </a>
+    <a href="#" onclick="window.document['centro'].src = mochalatte.src">
+        <img src="mochalatte.jpg" border="0" name="imagem" class="imagem" width="100px" height="100px">
+    </a>
+</center>
+</body>
+</html>
